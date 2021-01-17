@@ -1,0 +1,43 @@
+{% extends "blocks/base.html" %}
+{% load extras %}
+{% block content %}
+  <div class="row align-items-center justify-content-md-center">
+    <div class="col-3">
+      <div class="card ml-auto" style="height: 200px; width: 200px; 
+      background-color: #27262e; color: #bb9f89">
+        <div class="card-head" style="font-size: 25px">
+          {{detail_block.height}}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <table class="table table-hover table-sm">
+        <thead>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">heigth</th>
+            <td>{{detail_block.height}}</td>
+          </tr>
+          <tr>
+            <th scope="row">hash</th>
+            <td>{{detail_block.hash}}</td>
+          </tr>
+          <tr>
+            <th scope="row">time</th>
+            <td>{{detail_block.date_time}}</td>
+          </tr>
+          <tr>
+            <th scope="row">miner</th>
+            <td>{{detail_block.miner}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Transactions</th>
+            <td>{{detail_block.transactionCount}}</td>
+          </tr>
+        </tbody>
+    </table>
+    </div>
+</div>
+{% endblock %}
